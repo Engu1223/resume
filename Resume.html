@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume – Enguun Bat-Erdene</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #0f172a; /* slate-900 */
+      --muted: #475569; /* slate-600 */
+      --accent: #2563eb; /* blue-600 */
+      --chip: #e2e8f0; /* slate-200 */
+      --border: #e5e7eb; /* gray-200 */
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+      color: var(--fg);
+      background: var(--bg);
+      line-height: 1.45;
+    }
+    .page {
+      max-width: 900px;
+      margin: 32px auto;
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 2px 24px rgba(0,0,0,0.06);
+    }
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: end;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+    }
+    h1 { font-size: 2rem; line-height: 1.1; margin: 0; }
+    .role { color: var(--muted); font-weight: 500; margin-top: 4px; }
+    .contact { display: flex; gap: 12px; flex-wrap: wrap; font-size: 0.95rem; justify-content: flex-end; }
+    .contact a { color: var(--accent); text-decoration: none; }
+    .contact a:hover { text-decoration: underline; }
+
+    .section { margin: 20px 0; }
+    .section h2 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin: 0 0 8px;
+    }
+    .summary { font-size: 1.05rem; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+
+    .item { padding: 12px 12px; border: 1px solid var(--border); border-radius: 12px; }
+    .item h3 { margin: 0; font-size: 1.05rem; }
+    .sub { color: var(--muted); font-size: 0.95rem; margin: 2px 0 8px; }
+    .meta { display: flex; gap: 8px; flex-wrap: wrap; font-size: 0.9rem; color: var(--muted); }
+    .bullets { margin: 8px 0 0 0; padding-left: 18px; }
+    .bullets li { margin: 4px 0; }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .chip { background: var(--chip); border-radius: 999px; padding: 4px 10px; font-size: 0.9rem; }
+
+    .print-btn { border: 1px solid var(--border); background: #f8fafc; padding: 8px 12px; border-radius: 10px; cursor: pointer; font-weight: 600; }
+    .print-btn:hover { background: #eef2f7; }
+
+    @media (max-width: 720px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      header { grid-template-columns: 1fr; gap: 8px; }
+      .contact { justify-content: flex-start; }
+    }
+
+    /* Print styles */
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; border: none; margin: 0; padding: 0; }
+      header { border-bottom: 1px solid var(--border); }
+      .print-btn { display: none; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page" role="document" aria-label="Resume">
+    <header>
+      <div>
+        <h1>Enguun Bat-Erdene</h1>
+        <div class="role">Aspiring Data-Driven Business Student</div>
+      </div>
+      <div class="contact">
+        <a href="mailto:you@example.com">b23fa1247@ufe.edu.mn</a>
+        <a href="tel:+1234567890">+976 96292626</a>
+        <a href="https://linkedin.com/in/yourhandle" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+        <a href="https://github.com/yourhandle" target="_blank" rel="noreferrer noopener">GitHub</a>
+        <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>Profile</h2>
+      <p class="summary">
+        Business student passionate about using AI and analytics to improve student services and small-business operations. Experience leading projects, presenting research, and collaborating across teams in Mongolia and Taiwan.
+      </p>
+      <div class="chips" aria-label="Key strengths">
+        <span class="chip">Project Leadership</span>
+        <span class="chip">Customer Experience</span>
+        <span class="chip">Data Analysis</span>
+        <span class="chip">Process Improvement</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Education</h2>
+      <div class="grid-2">
+        <div class="item">
+          <h3>Asia University, Taiwan</h3>
+          <div class="sub">BBA (2+2 Program), Expected 2027</div>
+          <div class="meta"><span>Taichung, Taiwan</span> • <span>GPA: 3.7/4.0 (proj.)</span></div>
+        </div>
+        <div class="item">
+          <h3>University of Finance and Education (UFE)</h3>
+          <div class="sub">BBA Coursework, 2023–2025</div>
+          <div class="meta"><span>Ulaanbaatar, Mongolia</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Projects</h2>
+      <div class="grid-2">
+        <article class="item">
+          <h3>AI Chatbot for Student–Training Dept. Communication</h3>
+          <div class="sub">UFE – Research Project • 2025</div>
+          <ul class="bullets">
+            <li>Mapped key student queries and designed a chatbot flow to reduce office wait times by 40% (target).</li>
+            <li>Prototyped FAQ and ticketing integration; drafted evaluation plan for accuracy and satisfaction.</li>
+          </ul>
+          <div class="chips">
+            <span class="chip">Dialog Design</span>
+            <span class="chip">User Research</span>
+            <span class="chip">Automation</span>
+          </div>
+        </article>
+        <article class="item">
+          <h3>Coffee Shop Business Plan</h3>
+          <div class="sub">Entrepreneurship Assignment • 2025</div>
+          <ul class="bullets">
+            <li>Built a lean financial model and breakeven analysis; proposed loyalty program and seasonal menu.</li>
+            <li>Outlined store layout and sourcing strategy emphasizing local partnerships.</li>
+          </ul>
+          <div class="chips">
+            <span class="chip">Financial Modeling</span>
+            <span class="chip">Go‑to‑Market</span>
+            <span class="chip">Operations</span>
+          </div>
+        </article>
+        <article class="item">
+          <h3>Ethics & Online Communities Presentation</h3>
+          <div class="sub">School Presentation • 2025</div>
+          <ul class="bullets">
+            <li>Analyzed misuse of Facebook groups for assignment sales and teacher slander; proposed policy fixes.</li>
+            <li>Presented recommendations to classmates and faculty; facilitated Q&A discussion.</li>
+          </ul>
+          <div class="chips">
+            <span class="chip">Public Speaking</span>
+            <span class="chip">Policy Analysis</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Experience</h2>
+      <div class="grid-2">
+        <div class="item">
+          <h3>Student Services Volunteer</h3>
+          <div class="sub">UFE • 2024–2025</div>
+          <ul class="bullets">
+            <li>Assisted 100+ peers with course registration and admin procedures each term.</li>
+            <li>Created quick-reference guides that reduced repetitive questions to staff.</li>
+          </ul>
+        </div>
+        <div class="item">
+          <h3>Part-time Barista (Seasonal)</h3>
+          <div class="sub">Local Café • 2024</div>
+          <ul class="bullets">
+            <li>Maintained high customer satisfaction during peak hours; managed cash and POS.</li>
+            <li>Introduced simple prep checklist that cut opening time by ~10 minutes.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Skills</h2>
+      <div class="grid-3">
+        <div class="item">
+          <h3>Business</h3>
+          <div class="chips">
+            <span class="chip">Market Research</span>
+            <span class="chip">Customer Service</span>
+            <span class="chip">Excel / Sheets</span>
+          </div>
+        </div>
+        <div class="item">
+          <h3>Technology</h3>
+          <div class="chips">
+            <span class="chip">AI Chatbots</span>
+            <span class="chip">SQL (Basics)</span>
+            <span class="chip">Python (Basics)</span>
+          </div>
+        </div>
+        <div class="item">
+          <h3>Soft Skills</h3>
+          <div class="chips">
+            <span class="chip">Communication</span>
+            <span class="chip">Teamwork</span>
+            <span class="chip">Problem Solving</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Awards & Activities</h2>
+      <div class="grid-2">
+        <div class="item">
+          <h3>Dean's List</h3>
+          <div class="sub">UFE • 2024</div>
+          <p>Recognized for academic excellence (top 10%).</p>
+        </div>
+        <div class="item">
+          <h3>Student Club Member</h3>
+          <div class="sub">Entrepreneurship Society • 2023–Present</div>
+          <p>Organize peer workshops on pitching and business model canvases.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Languages</h2>
+      <div class="chips">
+        <span class="chip">Mongolian (Native)</span>
+        <span class="chip">English (Professional)</span>
+        <span class="chip">Chinese (Conversational)</span>
+      </div>
+    </section>
+
+    <footer class="section" aria-label="Helpful notes">
+      <div class="meta">Tip: Replace sample content with your details. Keep under 1 page. Quantify impact where possible.</div>
+    </footer>
+  </div>
+</body>
+</html>
